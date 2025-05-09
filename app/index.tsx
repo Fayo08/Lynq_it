@@ -11,7 +11,7 @@ export default function Index() {
         
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text style={{color:"white"}}>LYNQ IT.AI</Text>
     </View>
   );
 }
