@@ -9,13 +9,18 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fayosi.lynqit.ai",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.favy.Lynq_it_webapp"
     },
     "web": {
       "bundler": "metro",
@@ -32,10 +37,45 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Inter-VariableFont.ttf",
+            "./assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf"
+          ],
+          "ios": {
+            "fonts": [
+              "./assets/fonts/Inter-VariableFont.ttf",
+              "./assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf"
+            ]
+          }
+        }
       ]
+      
     ],
+  
+      "expo": {
+        "plugins": ["@react-native-google-signin/google-signin"],
+        "android": {
+          "googleServicesFile": "./google-services.json"
+        },
+        "ios": {
+          "googleServicesFile": "./GoogleService-Info.plist"
+        }
+      },
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "dc3f6bac-d486-4639-80cd-22e035341aef"
+      }
+    },
+    "owner": "fav-y"
   }
 }
