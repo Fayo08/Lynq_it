@@ -1,0 +1,6 @@
+module Pods_Lynqitwebapp {
+  umbrella header "Pods-Lynqitwebapp-umbrella.h"
+
+  export *
+  module * { export * }
+}
