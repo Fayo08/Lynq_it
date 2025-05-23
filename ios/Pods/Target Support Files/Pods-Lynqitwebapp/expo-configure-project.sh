@@ -48,4 +48,4 @@ with_node \
   --target "/Users/fayosi/Desktop/Lynq_it_webapp/ios/Pods/Target Support Files/Pods-Lynqitwebapp/ExpoModulesProvider.swift" \
   --entitlement "/Users/fayosi/Desktop/Lynq_it_webapp/ios/Lynqitwebapp/Lynqitwebapp.entitlements" \
   --platform "apple" \
-  --packages "expo" "expo-asset" "expo-blur" "expo-constants" "expo-dev-launcher" "expo-dev-menu" "expo-file-system" "expo-font" "expo-haptics" "expo-keep-awake" "expo-linking" "expo-router" "expo-splash-screen" "expo-symbols" "expo-system-ui" "expo-web-browser"
+  --packages "@react-native-google-signin/google-signin" "expo" "expo-asset" "expo-blur" "expo-constants" "expo-dev-launcher" "expo-dev-menu" "expo-file-system" "expo-font" "expo-haptics" "expo-keep-awake" "expo-linking" "expo-router" "expo-splash-screen" "expo-symbols" "expo-system-ui" "expo-web-browser"

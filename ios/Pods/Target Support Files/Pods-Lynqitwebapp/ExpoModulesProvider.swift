@@ -6,6 +6,7 @@
  */
 
 import ExpoModulesCore
+import ExpoAdapterGoogleSignIn
 import Expo
 import ExpoAsset
 import ExpoBlur
@@ -77,6 +78,7 @@ public class ExpoModulesProvider: ModulesProvider {
   public override func getAppDelegateSubscribers() -> [ExpoAppDelegateSubscriber.Type] {
     #if EXPO_CONFIGURATION_DEBUG
     return [
+      GoogleSignInAppDelegate.self,
       FileSystemBackgroundSessionHandler.self,
       LinkingAppDelegateSubscriber.self,
       ExpoHeadAppDelegateSubscriber.self,
@@ -85,6 +87,7 @@ public class ExpoModulesProvider: ModulesProvider {
     ]
     #else
     return [
+      GoogleSignInAppDelegate.self,
       FileSystemBackgroundSessionHandler.self,
       LinkingAppDelegateSubscriber.self,
       ExpoHeadAppDelegateSubscriber.self,
