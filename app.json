@@ -11,15 +11,18 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.fayosi.lynqit.ai",
+      
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
-      }
+      },
+        "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "googleServicesFile": "./google-services.json",
       "package": "com.favy.Lynq_it_webapp"
     },
     "web": {
@@ -52,19 +55,14 @@
             ]
           }
         }
-      ]
+
+      ],
+       "@react-native-firebase/app",
+      "@react-native-firebase/auth"
       
     ],
   
-      "expo": {
-        "plugins": ["@react-native-google-signin/google-signin"],
-        "android": {
-          "googleServicesFile": "./google-services.json"
-        },
-        "ios": {
-          "googleServicesFile": "./GoogleService-Info.plist"
-        }
-      },
+     
     "experiments": {
       "typedRoutes": true
     },
