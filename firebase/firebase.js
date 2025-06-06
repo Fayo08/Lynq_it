@@ -1,28 +1,24 @@
 // Import the necessary Firebase modules
-import firebase from '@react-native-firebase/app';
-import '@react-native-firebase/auth';
-import '@react-native-firebase/firestore';
-import { FIREBASE_APIKEY, FIREBASE_AUTHDOMAIN, FIREBASE_DATABASE_URL, FIREBASE_PROJECT_ID,FIREBASE_STORAGE_BUCKET,FIREBASE_MESSAGING_SENDER_ID,FIREBASE_APP_ID/* ... */ } from '@env';
+import { initializeApp } from 'firebase/app';
+import {getAuth} from 'firebase/auth';
+import {getFirestore} from 'firebase/firestore';
+
+
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: FIREBASE_APIKEY,
-  authDomain: FIREBASE_AUTHDOMAIN, 
-  databaseURL: FIREBASE_DATABASE_URL,
-  projectId: FIREBASE_PROJECT_ID,
-  storageBucket: FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
-  appId: FIREBASE_APP_ID,
+  apiKey: "AIzaSyAlHBbLLK-mJkrFI-Qw8HLDRLZrnOEDBOA",
+  authDomain: "lynq-it.firebaseapp.com",
+  databaseURL: "https://lynq-it-default-rtdb.firebaseio.com",
+  projectId: "lynq-it",
+  storageBucket: "lynq-it.firebasestorage.app",
+  messagingSenderId: "462794839649",
+  appId: "1:462794839649:web:6b6fc10cc7def24c573c20"
 };
 
 // Initialize Firebase
-let app;
-if (firebase.apps.length === 0) {
-  app = firebase.initializeApp(firebaseConfig);
-} else {
-  app = firebase.app();
-}
-const auth = firebase.auth();
-const db = firebase.firestore();
-// Export only what you need
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
 export { app, auth, db };

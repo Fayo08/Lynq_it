@@ -8,8 +8,8 @@ import {
 import { useState } from "react";
 import validator from "validator";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import auth from "@react-native-firebase/auth";
-import { postEmailandPassword } from "../firebase/postSignUp";
+import { signUp } from "../firebase/postSignUp";
+<script src="https://accounts.google.com/gsi/client" async></script>
 
 export default function signIn() {
   const [email, setEmail] = useState("");
@@ -43,7 +43,7 @@ export default function signIn() {
 
     //call postAnswers function
     try {
-      const user = await postEmailandPassword(email, password);
+      const user = await signUp(email, password);
       console.log("User created successfully", user);
     } catch (error) {
       console.error("Error creating user:", error);

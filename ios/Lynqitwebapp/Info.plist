@@ -34,6 +34,12 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
+          <string>com.googleusercontent.apps.462794839649-d24s44pbqmju2c6fejltchf7c48qv3cd</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
           <string>exp+lynqitwebapp</string>
         </array>
       </dict>

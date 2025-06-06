@@ -1,34 +1,31 @@
-import { db } from "@react-native-firebase/firestore";
-import { serverTimestamp, doc, setDoc } from "@react-native-firebase/firestore";
-import auth from '@react-native-firebase/auth';
 
-export const postEmailandPassword = async (email, password) => {
-  if (!email || !password) {
+import { auth } from "./firebase";
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+
+export const signUp = async (email, password) => {
+
+
+ if (!email || !password) {
     alert('Please fill in all fields');
-    return;
+    return  ;
   }
-
-  try {
-    // Use Firebase Auth to create user (do NOT store password in Firestore)
-    const userCredential = await auth().createUserWithEmailAndPassword(email, password);
-    const userId = userCredential.user.uid;
-
-    // Optionally, store user data (excluding password) in Firestore
-    const userRef = doc(db, 'users', userId);
-    await setDoc(
-      userRef,
-      {
-        email: email,
-        createdAt: serverTimestamp(),
-        updatedAt: serverTimestamp()
-      },
-      { merge: true }
-    );
-
+createUserWithEmailAndPassword(auth, email, password)
+.then((userCredential) => {
+ 
+    // Signed up 
+   
+ const userId = userCredential.user.uid;
     console.log('User created and data uploaded successfully!');
-    return { id: userId };
-  } catch (error) {
-    console.error('Error creating user or uploading data:', error);
-    throw error;
-  }
+     return { id: userId };
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+     console.error('Error creating user or uploading data:', errorCode, errorMessage);
+   throw error;
+  });
+    
 };
+    
+
+

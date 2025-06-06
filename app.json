@@ -11,19 +11,18 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.fayosi.lynqit.ai",
-      
+      "googleServicesFile": "./GoogleService-Info-1.plist",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
-      },
-        "googleServicesFile": "./GoogleService-Info.plist"
+      }
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
+      "package": "com.favy.Lynq_it_webapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "googleServicesFile": "./google-services.json",
-      "package": "com.favy.Lynq_it_webapp"
+      }
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +30,17 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+  
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
       "expo-router",
       [
         "expo-splash-screen",
@@ -55,14 +65,8 @@
             ]
           }
         }
-
-      ],
-       "@react-native-firebase/app",
-      "@react-native-firebase/auth"
-      
+      ]
     ],
-  
-     
     "experiments": {
       "typedRoutes": true
     },
