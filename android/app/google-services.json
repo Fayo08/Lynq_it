@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "462794839649",
+    "firebase_url": "https://lynq-it-default-rtdb.firebaseio.com",
+    "project_id": "lynq-it",
+    "storage_bucket": "lynq-it.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462794839649:android:c0cd9fdf61129035573c20",
+        "android_client_info": {
+          "package_name": "com.favy.Lynq_it_webapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462794839649-crugpmll26792gm42en20jd2k5frsdc3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFGuvfkmjnubz183y3CMO76ZTI0-E8XY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462794839649-crugpmll26792gm42en20jd2k5frsdc3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "462794839649-d24s44pbqmju2c6fejltchf7c48qv3cd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fayosi.lynqit.ai"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
