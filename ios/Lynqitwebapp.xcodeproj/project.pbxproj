@@ -14,10 +14,10 @@
 		96905EF65AED1B983A6B3ABC /* libPods-Lynqitwebapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Lynqitwebapp.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		5AFB982108DC4DB4868404AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3BC0798E2CA4E86838F2223 /* GoogleService-Info.plist */; };
-		B5B2F63CD1CE43529C03F0F6 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF6BC47672746CD880C7BE1 /* noop-file.swift */; };
-		094DB35F3EBF41CA8799AA9C /* Inter-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AFAA836B81143319954B0D8 /* Inter-VariableFont.ttf */; };
-		7CEF14504F06441C92C54FE8 /* Inter-Italic-VariableFont_opsz,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 964A25015F5E4DB3B910FCE3 /* Inter-Italic-VariableFont_opsz,wght.ttf */; };
+		A0578A5FB6C84ED8B5FB637A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E835D2938F14D87A45013D4 /* GoogleService-Info.plist */; };
+		CD600E74AAEB47799597197B /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24707B8FA04CFEBC4CD6D4 /* noop-file.swift */; };
+		809EC811391C4157B1452C9D /* Inter-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC248FD9C6A747B1BF7E682A /* Inter-VariableFont.ttf */; };
+		C358171C261340799825716C /* Inter-Italic-VariableFont_opsz,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAD74EBF5B1B4B64B78D0869 /* Inter-Italic-VariableFont_opsz,wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +34,11 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-Lynqitwebapp/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		D3BC0798E2CA4E86838F2223 /* GoogleService-Info.plist */ = {isa = PBXFileReference; name = "GoogleService-Info.plist"; path = "Lynqitwebapp/GoogleService-Info.plist"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
-		EBF6BC47672746CD880C7BE1 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "Lynqitwebapp/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
-		4D76D18A472E41FB922C93BD /* Lynqitwebapp-Bridging-Header.h */ = {isa = PBXFileReference; name = "Lynqitwebapp-Bridging-Header.h"; path = "Lynqitwebapp/Lynqitwebapp-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		7AFAA836B81143319954B0D8 /* Inter-VariableFont.ttf */ = {isa = PBXFileReference; name = "Inter-VariableFont.ttf"; path = "../assets/fonts/Inter-VariableFont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		964A25015F5E4DB3B910FCE3 /* Inter-Italic-VariableFont_opsz,wght.ttf */ = {isa = PBXFileReference; name = "Inter-Italic-VariableFont_opsz,wght.ttf"; path = "../assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E835D2938F14D87A45013D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; name = "GoogleService-Info.plist"; path = "Lynqitwebapp/GoogleService-Info.plist"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
+		5D24707B8FA04CFEBC4CD6D4 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "Lynqitwebapp/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		C72907EF756A41F690B1FB03 /* Lynqitwebapp-Bridging-Header.h */ = {isa = PBXFileReference; name = "Lynqitwebapp-Bridging-Header.h"; path = "Lynqitwebapp/Lynqitwebapp-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		AC248FD9C6A747B1BF7E682A /* Inter-VariableFont.ttf */ = {isa = PBXFileReference; name = "Inter-VariableFont.ttf"; path = "../assets/fonts/Inter-VariableFont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AAD74EBF5B1B4B64B78D0869 /* Inter-Italic-VariableFont_opsz,wght.ttf */ = {isa = PBXFileReference; name = "Inter-Italic-VariableFont_opsz,wght.ttf"; path = "../assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +63,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				D3BC0798E2CA4E86838F2223 /* GoogleService-Info.plist */,
-				EBF6BC47672746CD880C7BE1 /* noop-file.swift */,
-				4D76D18A472E41FB922C93BD /* Lynqitwebapp-Bridging-Header.h */,
+				5E835D2938F14D87A45013D4 /* GoogleService-Info.plist */,
+				5D24707B8FA04CFEBC4CD6D4 /* noop-file.swift */,
+				C72907EF756A41F690B1FB03 /* Lynqitwebapp-Bridging-Header.h */,
 			);
 			name = Lynqitwebapp;
 			sourceTree = "<group>";
@@ -95,7 +95,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
-				9017793FAFF64E74ACD7DE24 /* Resources */,
+				6E4E0A37B7484EEFAE706F85 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -144,11 +144,11 @@
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
-		9017793FAFF64E74ACD7DE24 /* Resources */ = {
+		6E4E0A37B7484EEFAE706F85 /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				7AFAA836B81143319954B0D8 /* Inter-VariableFont.ttf */,
-				964A25015F5E4DB3B910FCE3 /* Inter-Italic-VariableFont_opsz,wght.ttf */,
+				AC248FD9C6A747B1BF7E682A /* Inter-VariableFont.ttf */,
+				AAD74EBF5B1B4B64B78D0869 /* Inter-Italic-VariableFont_opsz,wght.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -216,10 +216,10 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				5AFB982108DC4DB4868404AC /* GoogleService-Info.plist in Resources */,
-				497F123FCBE5400692C478A5 /* Lynqitwebapp-Bridging-Header.h in Resources */,
-				094DB35F3EBF41CA8799AA9C /* Inter-VariableFont.ttf in Resources */,
-				7CEF14504F06441C92C54FE8 /* Inter-Italic-VariableFont_opsz,wght.ttf in Resources */,
+				A0578A5FB6C84ED8B5FB637A /* GoogleService-Info.plist in Resources */,
+				EF3E352855E7475C8F877903 /* Lynqitwebapp-Bridging-Header.h in Resources */,
+				809EC811391C4157B1452C9D /* Inter-VariableFont.ttf in Resources */,
+				C358171C261340799825716C /* Inter-Italic-VariableFont_opsz,wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +295,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				B5B2F63CD1CE43529C03F0F6 /* noop-file.swift in Sources */,
+				CD600E74AAEB47799597197B /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

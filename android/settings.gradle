@@ -21,7 +21,7 @@ extensions.configure(com.facebook.react.ReactSettingsExtension) { ex ->
   }
 }
 
-rootProject.name = 'Lynq_it_webapp'
+rootProject.name = 'Lynqitwebapp'
 
 dependencyResolutionManagement {
   versionCatalogs {

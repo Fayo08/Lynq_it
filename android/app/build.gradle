@@ -62,13 +62,6 @@ react {
     autolinkLibrariesWithApp()
 }
 
-plugins {
-  // ...
-
-  // Add the dependency for the Google services Gradle plugin
-  id("com.google.gms.google-services") version "4.4.2" apply false
-
-}
 /**
  * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
  */
@@ -93,13 +86,13 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.favy.Lynq_it_webapp'
+    namespace "com.lynqitwebapp"
     defaultConfig {
-        applicationId 'com.favy.Lynq_it_webapp'
+        applicationId "com.lynqitwebapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0"
     }
     signingConfigs {
         debug {
@@ -181,5 +174,3 @@ dependencies {
         implementation jscFlavor
     }
 }
-
-apply plugin: 'com.google.gms.google-services'
