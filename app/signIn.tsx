@@ -11,6 +11,8 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { signUp } from "../firebase/postSignUp";
 <script src="https://accounts.google.com/gsi/client" async></script>
 
+
+
 export default function signIn() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -53,6 +55,8 @@ export default function signIn() {
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
+
+  
 
   return (
     <View style={styles.container}>

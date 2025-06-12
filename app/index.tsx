@@ -1,6 +1,7 @@
 import { Text, StyleSheet, View } from "react-native";
 import { useEffect } from "react";
 import { useRouter } from "expo-router";
+import "../global.css"
 
 export default function Index() {
  
@@ -24,7 +25,7 @@ export default function Index() {
   useEffect(()=>{
     const timeout = setTimeout(()=>  {
       router.push('/signIn'); 
-    },2000)
+    },1000)
     return () => clearTimeout(timeout)
     }, [])
 
