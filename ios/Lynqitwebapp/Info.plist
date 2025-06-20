@@ -36,6 +36,8 @@
         <array>
           <string>com.googleusercontent.apps.462794839649-d24s44pbqmju2c6fejltchf7c48qv3cd</string>
         </array>
+        <key>CFBundleURLName</key>
+        <string>com.googleusercontent.apps.462794839649-d24s44pbqmju2c6fejltchf7c48qv3cd</string>
       </dict>
       <dict>
         <key>CFBundleURLSchemes</key>

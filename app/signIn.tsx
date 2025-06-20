@@ -5,20 +5,31 @@ import {
   TextInput,
   View,
 } from "react-native";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import validator from "validator";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { signUp } from "../firebase/postSignUp";
-<script src="https://accounts.google.com/gsi/client" async></script>
-
-
+import {
+  GoogleSignin,
+  GoogleSigninButton,
+} from '@react-native-google-signin/google-signin';
+import { auth } from "../firebase/firebase";
+import { GoogleAuthProvider, signInWithCredential } from "firebase/auth";
 
 export default function signIn() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
-
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+
+  // Configure Google Sign-In
+  useEffect(() => {
+    GoogleSignin.configure({
+      webClientId: '462794839649-crugpmll26792gm42en20jd2k5frsdc3.apps.googleusercontent.com',
+      iosClientId: '462794839649-d24s44pbqmju2c6fejltchf7c48qv3cd.apps.googleusercontent.com',
+      offlineAccess: true,
+    });
+  }, []);
 
   const validateEmail = (email: string) => {
     setEmail(email);
@@ -52,11 +63,32 @@ export default function signIn() {
     }
   };
 
+  const handleGoogleSignIn = async () => {
+    console.log("Google Sign-In button pressed");
+    try {
+      // Sign in with Google
+      console.log("Attempting Google Sign-In...");
+      await GoogleSignin.signIn();
+      
+      // Get the user's ID token
+      console.log("Getting tokens...");
+      const { idToken } = await GoogleSignin.getTokens();
+      
+      // Create a Google credential with the token
+      const credential = GoogleAuthProvider.credential(idToken);
+      
+      // Sign in with Firebase using the credential
+      const result = await signInWithCredential(auth, credential);
+      
+      console.log("User created successfully with Google:", result.user);
+    } catch (error) {
+      console.error("Error signing in with Google:", error);
+    }
+  };
+
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
-
-  
 
   return (
     <View style={styles.container}>
@@ -99,6 +131,14 @@ export default function signIn() {
         <Text style={styles.whiteFont}>
           Already have an account? <Text>Log in</Text>
         </Text>
+
+        <View style={styles.googleButtonContainer}>
+          <GoogleSigninButton
+            style={styles.googleButton}
+            onPress={handleGoogleSignIn}
+            disabled={false}
+          />
+        </View>
       </View>
     </View>
   );
@@ -157,5 +197,13 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 50,
     borderRadius: 8,
+  },
+  googleButtonContainer: {
+    alignItems: "center",
+    marginTop: 20,
+  },
+  googleButton: {
+    width: 200,
+    height: 40,
   },
 });
