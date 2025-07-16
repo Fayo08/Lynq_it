@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import validator from "validator";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { signUp } from "../firebase/postSignUp";
+import { useRouter } from "expo-router";
 import {
   GoogleSignin,
   GoogleSigninButton,
@@ -21,6 +22,7 @@ export default function signIn() {
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+    const router = useRouter();
 
   // Configure Google Sign-In
   useEffect(() => {
@@ -58,6 +60,7 @@ export default function signIn() {
     try {
       const user = await signUp(email, password);
       console.log("User created successfully", user);
+         router.push('/homepage');  
     } catch (error) {
       console.error("Error creating user:", error);
     }
@@ -79,6 +82,8 @@ export default function signIn() {
       
       // Sign in with Firebase using the credential
       const result = await signInWithCredential(auth, credential);
+      
+      router.push('/homepage'); 
       
       console.log("User created successfully with Google:", result.user);
     } catch (error) {
@@ -129,7 +134,7 @@ export default function signIn() {
       </View>
       <View style={styles.containerGoogle}>
         <Text style={styles.whiteFont}>
-          Already have an account? <Text>Log in</Text>
+          Already have an account? <Text style= {styles.bold}>Log in</Text>
         </Text>
 
         <View style={styles.googleButtonContainer}>
@@ -161,6 +166,9 @@ const styles = StyleSheet.create({
     gap: 20,
   },
   whiteFont: { color: "white" },
+  bold:{
+    fontWeight:"bold"
+  },
 
   containerEmail: {
     width: "100%",
@@ -203,7 +211,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   googleButton: {
-    width: 200,
+    width: 100,
     height: 40,
   },
 });
