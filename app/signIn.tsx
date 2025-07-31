@@ -14,8 +14,10 @@ import {
   GoogleSignin,
   GoogleSigninButton,
 } from '@react-native-google-signin/google-signin';
+
+import { GoogleAuthProvider,onAuthStateChanged, signInWithCredential } from "firebase/auth";
 import { auth } from "../firebase/firebase";
-import { GoogleAuthProvider, signInWithCredential } from "firebase/auth";
+
 
 export default function signIn() {
   const [email, setEmail] = useState("");
@@ -58,6 +60,7 @@ export default function signIn() {
 
     //call postAnswers function
     try {
+   
       const user = await signUp(email, password);
       console.log("User created successfully", user);
          router.push('/homepage');  
