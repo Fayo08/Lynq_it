@@ -1,37 +1,53 @@
 import Nav from "./component/Nav";
-import { View, StyleSheet, Text } from "react-native";
+import { useState } from "react";
+import * as Clipboard from '@react-native-clipboard/clipboard';
+
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import {globalStyles} from "../globalStyles"
 import { Link, Plus, Share, HeartPlus } from "lucide-react-native";
 import "../global.css";
 
 export default function landingPage() {
+const [paste, setPaste] = useState('')
+
+ const pasteFromClipboard = async () => {
+    const clipboardContent = await Clipboard.getString();
+    setPaste(clipboardContent); // set the pasted content into TextInput
+  };
   return (
-    <View style={styles.container}>
+    <View style={globalStyles.container}>
       <Nav></Nav>
 
-      <View style={styles.linkContainer}>
-        <Text style={styles.textWhite}>Add Link</Text>
-        <View style={styles.linkBorder}>
+      <View style={globalStyles.sectionColumn}>
+        <View style={globalStyles.line}></View>
+        <Text style={globalStyles.textBody}>Add Link</Text>
+        <TouchableOpacity style={globalStyles.linkButton}
+        onPress={pasteFromClipboard}>
           <Link color="white"></Link>
-        </View>
+        </TouchableOpacity>
       </View>
-      <View style={styles.collectionContainer}>
-        <Text style={styles.textWhite}>Create a Collection</Text>
-        <View style={styles.collection}>
+      <View style={globalStyles.sectionColumn}>
+            <View style={globalStyles.line}></View>
+        <Text style={globalStyles.textBody}>Create a Collection</Text>
+        <View style={globalStyles.collectionButton}>
           <Plus color="white"></Plus>
         </View>
       </View>
-       <View style={styles.shareContainer}>
-          <View style={styles.shareButton}>
+       <View style={globalStyles.sectionRow}>
+            <View style={globalStyles.line}></View>
+          <View style={globalStyles.primaryButton}>
             <HeartPlus></HeartPlus>
        
-            <Text style={styles.textDark}>Favorites</Text>
+            <Text style={globalStyles.buttonText}>Favorites</Text>
           </View>
-          <View style={styles.shareButton}>
+          <View style={globalStyles.primaryButton}>
      
 <Share></Share>
-            <Text style={styles.textDark}>
+            <Text style={globalStyles.buttonText}>
               Shared</Text>
+
           </View>
+            <View style={globalStyles.line}></View>  
         </View>
     </View>
   );
@@ -103,16 +119,5 @@ const styles = StyleSheet.create({
     gap: 60,
     padding: 20
   },
-  shareButton: {
-    display:"flex",
-    flexDirection: "row",
-padding: 10,
-gap:10,
-    backgroundColor: "white",
-       borderRadius: 30,
-        width: 150,
-    height: 48,
-justifyContent: "center",
-    alignItems: "center",
-  },
+
 });

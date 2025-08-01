@@ -25,19 +25,21 @@ export default function Index() {
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout>;
 
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const getLoggedInUser = onAuthStateChanged(auth, (user) => {
       timeout = setTimeout(() => {
         if (user) {
           router.push("/landingPage");
+          // You want to try to tweak the logic to direct you to signIn page for now.
+
         } else {
-          router.push("/signIn");
+             router.push("/signIn");
         }
       }, 1000);
     });
 
     return () => {
       if (timeout) clearTimeout(timeout);
-      unsubscribe();
+      getLoggedInUser();
     };
   }, [router]);
 
